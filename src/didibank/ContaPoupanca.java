@@ -1,6 +1,6 @@
 package didibank;
 
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta implements Tributavel {
 	
 	Double valorTaxa = 0.2;
 	
@@ -15,5 +15,10 @@ public class ContaPoupanca extends Conta{
 		valor +=valorTaxa;
 		return super.sacar(valor);
 		
+	}
+
+	@Override
+	public double valorImposto() {
+		return super.getSaldo()*0.01;
 	}
 }

@@ -7,11 +7,15 @@ public abstract class Conta {
 	private Cliente titular;
 	private static int total;
 	
+	
+	
 	public Conta(int agencia, int numero) {
 		this.agencia = agencia;
 		this.numero = numero;
 		Conta.total++;
 	}
+	
+	
 	
 	
 	
@@ -64,6 +68,7 @@ public abstract class Conta {
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
+	//////////////////////////////////
 	public static int getTotal() {
 		return total;
 		

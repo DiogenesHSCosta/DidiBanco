@@ -25,12 +25,17 @@ public class CriaConta {
 		
 		
 		contaC.depositar(200);
-		
 		contaC.transferir(100, contaP);
 		System.out.println("Saldo da conta corrente é: "+ contaC.getSaldo());
 		contaP.sacar(30);
-		System.out.println(contaP.getSaldo());
+		System.out.println("Saldo da conta poupança é: "+ contaP.getSaldo());
 
+		
+		CalcularImposto imposto = new CalcularImposto();
+		imposto.calculoImposto(contaP);
+		System.out.println(imposto.getTotalImposto());
+		imposto.calculoImposto(contaC);
+		System.out.println(imposto.getTotalImposto());
 		
 	}
 	
